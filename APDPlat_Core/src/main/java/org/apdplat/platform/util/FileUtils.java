@@ -59,11 +59,11 @@ public class FileUtils {
      */
     public static boolean appendText(String path,String text){
         try{
-            File file=new File(path);
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))) {
-                writer.write(text);
-            }
-            return true;
+            File file = new File(path);
+    		BufferedWriter writer = new BufferedWriter(new FileWriter(file,	true));
+			writer.write(text);
+			writer.flush();
+			return true;
         }catch(Exception e){
             LOG.error("写文件出错",e);
         }
