@@ -44,6 +44,9 @@ import org.springframework.util.Assert;
 public class ReflectionUtils {
     protected static final APDPlatLogger LOG = new APDPlatLogger(ReflectionUtils.class);
     
+    /**
+     * 阻止外部生成此类的实例
+     * /
     private ReflectionUtils(){};
 
     /**
